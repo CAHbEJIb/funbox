@@ -1,0 +1,248 @@
+body {
+    background: url(/src/img/Pattern.png) 0 0 /cover repeat-y;
+
+    @media(min-resolution: 2dppx) {
+        background: url(/src/img/Pattern@2x.jpg) 0 0 /cover repeat-y;
+    }
+}
+
+.main {
+
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 104px 80px;
+    margin: auto;
+    height: auto;
+
+    &__cat-card {
+        display: flex;
+        flex-wrap: wrap;
+        // gap: 40px;
+    }
+}
+
+.cat-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+
+    &__container {
+        position: relative;
+        margin: 40px;
+
+        &:hover {
+            .cat-card {
+                &__box {
+                    background: $mainHover;
+                }
+
+                &__weight {
+                    background: $mainHover
+                }
+
+                &__sign--bold {
+                    color: $mainHover;
+                    border-bottom: 1px dashed $mainHover;
+                }
+
+
+            }
+        }
+
+        &--active {
+            &:hover {
+                .cat-card {
+                    &__box {
+                        background: $active;
+                    }
+
+                    &__weight {
+                        background: $active;
+                    }
+                }
+            }
+
+            .cat-card {
+                &__box {
+                    background: $active;
+                }
+
+                &__weight {
+                    background: $active;
+                }
+
+                &__sign {
+                    display: none;
+
+                    &--active {
+                        display: block;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            &-hover {
+                &:hover {
+                    .cat-card {
+                        &__box {
+                            background: $activeHover;
+                        }
+
+                        &__weight {
+                            background: $activeHover;
+                        }
+
+                        &__subtitle {
+                            display: none;
+
+                            &--active-hover {
+                                display: block;
+                                font-size: 16px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &__box {
+        min-height: 480px;
+        position: relative;
+        cursor: pointer;
+        width: 320px;
+        display: flex;
+        padding: 4px;
+        border-radius: 12px;
+        clip-path: polygon(42px 0%, 100% 0, 100% 100%, 0 100%, 0% 42px);
+        background: $main;
+
+
+    }
+
+    &__wrapper {
+        position: relative;
+        flex: 1 1;
+        border-radius: 9px;
+        clip-path: polygon(39px 0%, 100% 0, 100% 100%, 0 100%, 0% 39px);
+        overflow: hidden;
+        background: white;
+        padding: 17px 12px 12px 44px;
+        cursor: pointer;
+
+
+
+    }
+
+    &__main-title {
+        white-space: nowrap;
+        font-family: 'Exo2.0 Thin', serif;
+        font-size: 36px;
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $weightCol;
+
+    }
+
+
+    &__subtitle {
+        color: $subtitleCol;
+        font-size: 16px;
+        margin-bottom: 5px;
+
+        &--active-hover {
+
+            display: none;
+            color: $subtitleColHover;
+        }
+
+    }
+
+    &__name {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    &__option-list {}
+
+    &__option {
+        font-size: 14px;
+        color: $subtitleCol;
+
+        &--bold {
+            font-weight: 700;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__weight {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        color: $weightCol;
+        font-size: 21px;
+        background: $main;
+        padding-top: 14px;
+
+        &--figure {
+            font-size: 42px;
+        }
+    }
+
+    &__sign {
+        color: $weightCol;
+        font-size: 13px;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 200;
+        margin-bottom: -32px;
+
+        &--bold {
+            font-weight: 700;
+            color: $main;
+            border-bottom: 1px dashed transparent;
+
+            &:hover {
+                color: $mainHover;
+                border-bottom: 1px dashed $mainHover;
+                cursor: pointer;
+            }
+        }
+
+        &--active {
+            display: none;
+        }
+    }
+}
