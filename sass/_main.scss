@@ -25,10 +25,6 @@ body {
     &__cat-card {
         display: flex;
         flex-wrap: wrap;
-
-
-
-        ;
     }
 }
 
@@ -53,8 +49,6 @@ body {
             margin: 40px;
         }
 
-        ;
-
         &:hover {
             .cat-card {
                 &__box {
@@ -69,8 +63,6 @@ body {
                     color: $mainHover;
                     border-bottom: 1px dashed $mainHover;
                 }
-
-
             }
         }
 
@@ -184,7 +176,6 @@ body {
                     }
                 }
 
-
                 &__weight {
                     background: $disableCol;
                 }
@@ -202,8 +193,6 @@ body {
         border-radius: 12px;
         clip-path: polygon(42px 0%, 100% 0, 100% 100%, 0 100%, 0% 42px);
         background: $main;
-
-
     }
 
     &__wrapper {
@@ -215,9 +204,6 @@ body {
         background: white;
         padding: 17px 12px 12px 44px;
         cursor: pointer;
-
-
-
     }
 
     &__main-title {
@@ -229,9 +215,7 @@ body {
         left: 50%;
         transform: translateX(-50%);
         color: $weightCol;
-
     }
-
 
     &__subtitle {
         color: $subtitleCol;
@@ -239,11 +223,9 @@ body {
         margin-bottom: 5px;
 
         &--active-hover {
-
             display: none;
             color: $subtitleColHover;
         }
-
     }
 
     &__name {
