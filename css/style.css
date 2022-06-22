@@ -165,7 +165,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 104px 80px;
+  padding: 104px 10px;
   margin: auto;
   height: auto;
 }
@@ -195,7 +195,19 @@ body {
 
 .cat-card__container {
   position: relative;
-  margin: 40px;
+  margin: 5px;
+}
+
+@media (max-width: 1040px) {
+  .cat-card__container {
+    margin: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cat-card__container {
+    margin: 40px;
+  }
 }
 
 .cat-card__container:hover .cat-card__box {

@@ -13,14 +13,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 104px 80px;
+    padding: 104px 10px;
+
     margin: auto;
     height: auto;
+
+    @media (max-width: 1040px) {
+        // padding: 104px 80px;
+    }
 
     &__cat-card {
         display: flex;
         flex-wrap: wrap;
-        // gap: 40px;
+
+
+
+        ;
     }
 }
 
@@ -34,7 +42,18 @@ body {
 
     &__container {
         position: relative;
-        margin: 40px;
+        margin: 5px;
+
+        @media (max-width: 1040px) {
+            margin: 40px 20px;
+        }
+
+
+        @media (max-width: 768px) {
+            margin: 40px;
+        }
+
+        ;
 
         &:hover {
             .cat-card {
