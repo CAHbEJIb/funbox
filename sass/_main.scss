@@ -1,8 +1,8 @@
 body {
-    background: url(/src/img/Pattern.png) 0 0 /cover repeat-y;
+    background: url(../img/Pattern.png) 0 0 /cover repeat-y;
 
     @media(min-resolution: 2dppx) {
-        background: url(/src/img/Pattern@2x.jpg) 0 0 /cover repeat-y;
+        background: url(../img/Pattern@2x.jpg) 0 0 /cover repeat-y;
     }
 }
 
@@ -131,7 +131,65 @@ body {
             }
         }
 
+        &--disable {
 
+            &:hover {
+                .cat-card {
+                    &__box {
+                        background: $disableCol;
+                    }
+
+                    &__weight {
+                        background: $disableCol;
+                    }
+
+                    &__subtitle {
+                        display: block;
+
+                        &--active-hover {
+                            display: none;
+
+                        }
+                    }
+                }
+            }
+
+            .cat-card {
+
+                &__box {
+                    background: $disableCol;
+                }
+
+                &__wrapper {
+                    opacity: 0.5;
+                }
+
+                &__subtitle,
+                &__name,
+                &__title,
+                &__option {
+                    color: $disableCol;
+                }
+
+                &__sign {
+                    display: none;
+
+                    &--active {
+                        display: none;
+                    }
+
+                    &--disable {
+                        display: block;
+                        color: $disableSign;
+                    }
+                }
+
+
+                &__weight {
+                    background: $disableCol;
+                }
+            }
+        }
     }
 
     &__box {
@@ -261,6 +319,10 @@ body {
         }
 
         &--active {
+            display: none;
+        }
+
+        &--disable {
             display: none;
         }
     }

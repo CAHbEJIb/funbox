@@ -144,12 +144,12 @@ a {
 }
 
 body {
-  background: url(/src/img/Pattern.png) 0 0/cover repeat-y;
+  background: url(../img/Pattern.png) 0 0/cover repeat-y;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   body {
-    background: url(/src/img/Pattern@2x.jpg) 0 0/cover repeat-y;
+    background: url(../img/Pattern@2x.jpg) 0 0/cover repeat-y;
   }
 }
 
@@ -264,6 +264,51 @@ body {
   display: block;
   font-size: 16px;
   margin-bottom: 5px;
+}
+
+.cat-card__container--disable:hover .cat-card__box {
+  background: #B3B3B3;
+}
+
+.cat-card__container--disable:hover .cat-card__weight {
+  background: #B3B3B3;
+}
+
+.cat-card__container--disable:hover .cat-card__subtitle {
+  display: block;
+}
+
+.cat-card__container--disable:hover .cat-card__subtitle--active-hover {
+  display: none;
+}
+
+.cat-card__container--disable .cat-card__box {
+  background: #B3B3B3;
+}
+
+.cat-card__container--disable .cat-card__wrapper {
+  opacity: 0.5;
+}
+
+.cat-card__container--disable .cat-card__subtitle, .cat-card__container--disable .cat-card__name, .cat-card__container--disable .cat-card__title, .cat-card__container--disable .cat-card__option {
+  color: #B3B3B3;
+}
+
+.cat-card__container--disable .cat-card__sign {
+  display: none;
+}
+
+.cat-card__container--disable .cat-card__sign--active {
+  display: none;
+}
+
+.cat-card__container--disable .cat-card__sign--disable {
+  display: block;
+  color: #ffff66;
+}
+
+.cat-card__container--disable .cat-card__weight {
+  background: #B3B3B3;
 }
 
 .cat-card__box {
@@ -400,5 +445,9 @@ body {
 }
 
 .cat-card__sign--active {
+  display: none;
+}
+
+.cat-card__sign--disable {
   display: none;
 }
